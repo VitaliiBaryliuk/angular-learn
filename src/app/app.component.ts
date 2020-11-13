@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
 
 //@ts-ignore
 export class AppComponent {
-    name= '';
+    name = 'Tom';
+    age = 25;
+    colspan = 2;
+    count: number = 0;
+    isRed: boolean = false;
+    redclass: string = 'isredbox';
+
+    increase($event: any): void {
+        this.count++;
+
+        console.log('$EVENT', $event)
+    }
 }

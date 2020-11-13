@@ -1,3 +1,41 @@
-<label>Введите имя:</label>
-<input [(ngModel)]="name" placeholder="name">
-<h1>Добро пожаловать {{name}}!</h1>
+<h1>Using component variables and mothods</h1>
+<input type="text" [(ngModel)]="name" placeholder="name"/>
+<br>
+<p>Имя: {{name}}</p>
+<p>Возраст: {{age}}</p>
+<hr>
+<br>
+<table border="1">
+  <tr><td [attr.colspan]="colspan">One-Two</td></tr>
+  <tr><td>Three</td><td>Four</td></tr>
+  <tr><td>Five</td><td>Six</td></tr>
+</table>
+<hr>
+<br>
+<button (click)="increase($event)">Click</button>
+<p>Кол-во кликов: {{count}}</p>
+<hr>
+<br>
+<div class="css-bind">
+  <h1>Applyng styles</h1>
+  <div [class]="redclass">class from variable</div>
+  <br>
+  <!-- <div [style.background-color]="isRed ? 'red' : 'green'">class conditionaly</div> -->
+  <br>
+  <div class="flex-wrapper">
+    <div>
+      <div [class.isredbox]="isRed">class conditionaly</div>
+      <div [class.isredbox]="!isRed">class conditionaly</div>
+    </div>
+    <div>
+      <div [style.background-color]="isRed ? 'red' : 'green'">style conditionaly</div>
+      <div [style.backgroundColor]="!isRed ? 'red' : 'green'">style conditionaly</div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <input type="checkbox" [(ngModel)]="isRed" />
+</div>
+<hr>
+<br>

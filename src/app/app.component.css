@@ -1,8 +1,30 @@
-h1, h2 {
+h1, h2{
   color:navy;
 }
 
-label {
-  font-size:13px; 
-  font-family:Verdana;
+p{
+  font-size:13px;
+}
+
+:host {
+  font-family: Verdana;
+  color: #555;
+}
+
+.css-bind div {
+  width:100px; 
+  height:50px; 
+  border:1px solid #ccc;
+}
+         
+.isredbox {
+  background-color:red;
+  color: #fff
+}
+
+.css-bind .flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  border: none;
 }
