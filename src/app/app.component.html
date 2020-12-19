@@ -1,5 +1,21 @@
+<nav>
+  <a routerLink="" routerLinkActive="active">Main</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <a 
+    [routerLink]="['item', '5']"
+    [queryParams]="{ 'product': 'phone', 'price': 200 }"
+  >item 5</a>
+  <a 
+    [routerLink]="['item', '8']"
+    [queryParams]="{ 'product': 'tablet' }"
+  >item 8</a>
+  <a routerLink="/item/5/details">Информация о товаре</a> |
+  <a routerLink="/item/5/stat">Статистика товара</a>
+</nav>
+<router-outlet></router-outlet>
 <h1>Using component variables and mothods</h1>
 <input type="text" [(ngModel)]="name" placeholder="name"/>
+<input type="number" [(ngModel)]="age" placeholder="age"/>
 <br>
 <p>Имя: {{name}}</p>
 <p>Возраст: {{age}}</p>
@@ -39,3 +55,74 @@
 </div>
 <hr>
 <br>
+<h1>Using components</h1>
+<!-- <child-comp></child-comp> -->
+<child-comp 
+  (onChanged)="onChanged($event)" 
+  [(userName)]="name" 
+  [userAge]="age"
+>
+  <h2>Добро пожаловать {{name}}!</h2>
+</child-comp>
+<hr>
+<br>
+<p>Clicks count {{clicks}}</p>
+<hr>
+<br>
+<life-cycle-methods-component [name]="name"></life-cycle-methods-component>
+<hr>
+<br>
+<h1>Template variables</h1>
+<template-variables-component></template-variables-component>
+<hr>
+<br>
+<h1>Classes directives</h1>
+<classes-directives-component></classes-directives-component>
+<hr>
+<br>
+<h1>Custom attributive directives</h1>
+<custom-attributive-directives-component></custom-attributive-directives-component>
+<hr>
+<br>
+<h1>Structure directives - *ngIf, *nfFor, *ngSwitch</h1>
+<structure-directives-component></structure-directives-component>
+<hr>
+<br>
+<h1>Services component</h1>
+<services-component></services-component>
+<hr>
+<br>
+<h1>Forms component</h1>
+<forms-component></forms-component>
+<hr>
+<br>
+<h1>Forms NgForm directive</h1>
+<forms-ngForm-component></forms-ngForm-component>
+<hr>
+<br>
+<h1>Reactive forms</h1>
+<forms-reactive-component></forms-reactive-component>
+<hr>
+<br>
+<h1>Reactive forms BormBuilder</h1>
+<forms-reactive-form-builder-component></forms-reactive-form-builder-component>
+<hr>
+<br>
+<h1>Http request component</h1>
+<http-request-component></http-request-component>
+<hr>
+<br>
+<h1>RxJs component</h1>
+<rxjs-component></rxjs-component>
+<hr>
+<br>
+<h1>RxJs error response processing</h1>
+<rxjs-error-response-processing-component></rxjs-error-response-processing-component>
+<hr>
+<br>
+<h1>Requests component</h1>
+<requests-component></requests-component>
+<hr>
+<br>
+<h1>Pipes component</h1>
+<pipes-component></pipes-component>

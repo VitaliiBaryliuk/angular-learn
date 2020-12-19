@@ -1,0 +1,32 @@
+<!-- <p *ngIf="condition">
+  hello world
+</p>
+<p *ngIf="!condition">
+  goodbye world
+</p> -->
+<p *ngIf="condition;else unset">
+  hello world
+</p>
+<ng-template #unset>  
+  <p>goodbye world</p>  
+</ng-template>
+<button (click)="toggle()">Change1</button>
+<br>
+<br>
+<div *ngIf="condition2; then thenBlock else elseBlock"></div>   
+<ng-template #thenBlock>Then template</ng-template>
+<ng-template #elseBlock>Else template</ng-template>
+<br>
+<br>
+<p *while="condition2">Show/hide with custom directive - while</p>
+<br>
+<button (click)="toggle2()">Change2</button>
+<ul>
+  <li *ngFor="let item of items; let i = index">{{i + 1}}. {{item}}</li>
+</ul>
+
+<div [ngSwitch]="count">
+  <ng-template ngSwitchCase="1">{{count * 10}}</ng-template> 
+  <ng-template ngSwitchCase="2">{{count * 100}}</ng-template> 
+  <ng-template ngSwitchDefault>{{count * 1000}}</ng-template> 
+</div>

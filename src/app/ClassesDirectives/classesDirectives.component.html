@@ -1,0 +1,11 @@
+<div [ngClass]="{ verdanaFont: isVerdana, invisible: !visibility }">
+  <h3 [ngClass]="currentClasses">Hello Angular by adding [ngClass]="Object with classes names"</h3>
+  <p [class.verdanaFont]="false" [class.segoePrintFont]="true">
+    Styles implemented by adding classes using [class.someClassName]="true/false"
+  </p>
+  <p [ngStyle]="{'font-size':'14px', 'font-family':'Segoe Print'}">
+    Styles implemented directly using [ngStyle]="'font-size':'14px', ..."
+  </p>
+</div>
+<p [style.display]="visibility ? 'block' : 'none'">Set visibility directly example</p>
+<button type="text" (click)="toggle()">show/hide</button>

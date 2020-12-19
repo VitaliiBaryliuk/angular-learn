@@ -1,0 +1,7 @@
+<p>About pomponent</p>
+<button (click)="goHome()">Home</button>  <a 
+[routerLink]="['item', '5']"
+[queryParams]="{ 'product': 'phone', 'price': 200 }"
+>item 5</a>
+<br>
+<button class="btn btn-default" (click)="save()">Сохранить</button>

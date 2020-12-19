@@ -1,0 +1,14 @@
+<p #userName>{{name}}</p>
+<p>{{userName.textContent}}</p>
+<input type="text" [(ngModel)]="name" />
+<br>
+<template-variables-child #counter>
+  <h3 #headerContent>Header text that should be changed!</h3>
+</template-variables-child>
+<button (click)="counter.increment()">+</button>
+<!-- using methods of child component with ViewChild -->
+<button (click)="decrement()">-</button>
+<br>
+<br>
+<button (click)="change()">Change text</button>
+<p #nameText>{{name}}</p>
